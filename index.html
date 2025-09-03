@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portada Moodle</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Contenedor principal */
+    .portada {
+      height: 100vh;
+      width: 100%;
+      background-image: url("portada.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Íconos en desktop */
+    .iconos {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .iconos a {
+      text-decoration: none;
+    }
+
+    .iconos img {
+      width: 250px; /* Aumentamos el tamaño en desktop */
+      transition: transform 0.3s;
+    }
+
+    .iconos img:hover {
+      transform: scale(1.1);
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .iconos {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .iconos img {
+        width: 120px; /* tamaño chico en mobile */
+      }
+
+      /* Reemplazo de imágenes en mobile */
+      .iconos a:nth-child(1) img {
+        content: url("Sectores/Boton01_S.png");
+      }
+      .iconos a:nth-child(2) img {
+        content: url("Sectores/Boton02_S.png");
+      }
+      .iconos a:nth-child(3) img {
+        content: url("Sectores/Boton03_S.png");
+      }
+    }
+
+    @media (max-width: 480px) {
+      .iconos img {
+        width: 90px; /* aún más chico en móviles pequeños */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="portada">
+    <div class="iconos">
+      <a href="enlace1.html" target="_blank">
+        <img src="Sectores/Boton01_S.png" alt="Icono 1">
+      </a>
+      <a href="enlace2.html" target="_blank">
+        <img src="Sectores/Boton02_S.png" alt="Icono 2">
+      </a>
+      <a href="enlace3.html" target="_blank">
+        <img src="Sectores/Boton03_S.png" alt="Icono 3">
+      </a>
+    </div>
+  </div>
+</body>
+</html>
