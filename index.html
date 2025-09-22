@@ -11,16 +11,16 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
       font-family: Arial, sans-serif;
     }
 
-    /* Contenedor principal */
+    /* ====== PORTADA PRINCIPAL ====== */
     .portada {
       height: 100vh;
       width: 100%;
-      background-image: url("Guadaprueba2/fondo2.jpg");
+      background-image: url("Guadaprueba2/fondogrande.jpg"); /*imagen de escritorio */
       background-size: cover;
       background-position: center;
       display: flex;
@@ -30,7 +30,7 @@
       overflow: hidden;
     }
 
-    /* Íconos en desktop */
+    /* ====== ÍCONOS EN DESKTOP ====== */
     .iconos {
       display: flex;
       gap: 1.5rem;
@@ -48,8 +48,8 @@
     }
 
     .iconos img {
-      width: 170px; /* tamaño desktop */
-      transition: transform 0.3s;
+      width: 180px; /* Tamaño de los íconos en desktop */
+      transition: transform 0.3s ease;
       filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
     }
 
@@ -57,40 +57,32 @@
       transform: scale(1.2);
     }
 
-    /* MOBILE */
+    /* ====== FONDO PARA TABLET ====== */
+    @media (max-width: 1024px) {
+      .portada {
+        background-image: url("Guadaprueba2/fondomediano.jpg"); /* imagen para tablets */
+      }
+    }
+
+    /* ====== AJUSTES PARA MOBILE ====== */
     @media (max-width: 600px) {
+      .portada {
+        background-image: url("Guadaprueba2/fondochico.jpg"); /* 👉 Reemplaza con tu imagen para móviles */
+      }
+
       .iconos {
         flex-direction: column;
         gap: 1rem;
       }
 
       .iconos img {
-        width: 110px; /* tamaño chico en mobile */
-      }
-
-      /* Reemplazo de imágenes en mobile */
-      .iconos a:nth-child(1) img {
-        content: url("Guadaprueba2/parada1small.png");
-      }
-      .iconos a:nth-child(2) img {
-        content: url("Guadaprueba2/parada2small.png");
-      }
-      .iconos a:nth-child(3) img {
-        content: url("Guadaprueba2/parada3small.png");
-      }
-      
-      .iconos a:nth-child(4) img {
-        content: url("Guadaprueba2/puntolectura2small.png");
-      }
-      
-      .iconos a:nth-child(5) img {
-        content: url("Guadaprueba2/puntoencuentro2small.png");
+        width: 110px; /* Tamaño de íconos en móviles */
       }
     }
 
     @media (max-width: 480px) {
       .iconos img {
-        width: 70px; /* aún más chico en móviles pequeños */
+        width: 80px; /* Íconos aún más chicos en pantallas muy pequeñas */
       }
     }
   </style>
@@ -99,18 +91,16 @@
   <div class="portada">
     <div class="iconos">
       <a href="https://isep-cba.edu.ar/campus/mod/url/view.php?id=20564" target="_blank">
-        <img src="Guadaprueba2/puntolectura2.png" alt="Icono 4">
-     
+        <img src="Guadaprueba2/puntolectura2.png" alt="Icono 1">
+      </a>
       <a href="https://isep-cba.edu.ar/campus/mod/url/view.php?id=20565" target="_blank">
-        <img src="Guadaprueba2/parada1b.png" alt="Icono 1">
+        <img src="Guadaprueba2/parada1b.png" alt="Icono 2">
       </a>
       <a href="https://isep-cba.edu.ar/campus/mod/url/view.php?id=20566" target="_blank">
-        <img src="Guadaprueba2/parada2b.png" alt="Icono 2">
+        <img src="Guadaprueba2/parada2b.png" alt="Icono 3">
       </a>
       <a href="https://isep-cba.edu.ar/campus/mod/url/view.php?id=20567" target="_blank">
-        <img src="Guadaprueba2/parada3b.png" alt="Icono 3">
-      </a>
-     
+        <img src="Guadaprueba2/parada3b.png" alt="Icono 4">
       </a>
       <a href="https://isep-cba.edu.ar/campus/mod/url/view.php?id=20568" target="_blank">
         <img src="Guadaprueba2/puntoencuentro2.png" alt="Icono 5">
@@ -119,3 +109,4 @@
   </div>
 </body>
 </html>
+
