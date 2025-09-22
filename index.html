@@ -64,10 +64,10 @@
       }
     }
 
-    /* ====== AJUSTES PARA MOBILE ====== */
+    /* ====== MOBILE ====== */
     @media (max-width: 600px) {
       .portada {
-        background-image: url("Guadaprueba2/fondochico.jpg"); /* 👉 Reemplaza con tu imagen para móviles */
+        background-image: url("Guadaprueba2/fondochico.jpg"); /* 👉 Mobile */
       }
 
       .iconos {
@@ -76,13 +76,31 @@
       }
 
       .iconos img {
-        width: 110px; /* Tamaño de íconos en móviles */
+        width: 110px; /* Tamaño reducido */
+      }
+
+      /* 👉 Reemplazo de imágenes con versión mobile */
+      .iconos a:nth-child(1) img {
+        content: url("Guadaprueba2/puntolectura2small.png");
+      }
+      .iconos a:nth-child(2) img {
+        content: url("Guadaprueba2/parada1small.png");
+      }
+      .iconos a:nth-child(3) img {
+        content: url("Guadaprueba2/parada2small.png");
+      }
+      .iconos a:nth-child(4) img {
+        content: url("Guadaprueba2/parada3small.png");
+      }
+      .iconos a:nth-child(5) img {
+        content: url("Guadaprueba2/puntoencuentro2small.png");
       }
     }
 
+    /* ====== MOBILE MUY PEQUEÑO ====== */
     @media (max-width: 480px) {
       .iconos img {
-        width: 80px; /* Íconos aún más chicos en pantallas muy pequeñas */
+        width: 80px; /* íconos aún más chicos */
       }
     }
   </style>
