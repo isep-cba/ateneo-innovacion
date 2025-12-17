@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portada Moodle</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ==================================================
+       VARIABLES POR CURSO (OPCIÓN B)
+       ================================================== */
+
+    .curso-base {
+      --fondo-desktop: url("Guadaprueba3/fondogrande3.jpg");
+      --fondo-mobile: url("Guadaprueba3/fondochico3.jpg");
+
+      --partida-top: 5%;
+      --partida-left: 15%;
+
+      --parada1-top: 30%;
+      --parada1-left: 30%;
+
+      --parada2-top: 10%;
+      --parada2-right: 40%;
+
+      --parada3-bottom: 35%;
+      --parada3-right: 15%;
+
+      --encuentro-bottom: 15%;
+      --encuentro-left: 35%;
+    }
+
+    /* ==================================================
+       PORTADA
+       ================================================== */
+
+    .portada {
+      height: 100vh;
+  min-height: 100vh;
+      width: 100%;
+      background-image: var(--fondo-desktop);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ==================================================
+       ÍCONOS DESKTOP
+       ================================================== */
+
+    .iconos {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .iconos a.icono {
+      position: absolute;
+      text-decoration: none;
+    }
+
+    .iconos img {
+      width: 160px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+    }
+
+    @media (hover: hover) {
+      .iconos img:hover {
+        transform: scale(1.3);
+      }
+    }
+
+    /* ===== posiciones por ícono ===== */
+
+    .icono-partida {
+      top: var(--partida-top);
+      left: var(--partida-left);
+    }
+
+    .icono-parada1 {
+      top: var(--parada1-top);
+      left: var(--parada1-left);
+    }
+
+    .icono-parada2 {
+      top: var(--parada2-top);
+      right: var(--parada2-right);
+    }
+
+    .icono-parada3 {
+      bottom: var(--parada3-bottom);
+      right: var(--parada3-right);
+    }
+
+    .icono-encuentro {
+      bottom: var(--encuentro-bottom);
+      left: var(--encuentro-left);
+    }
+
+    /* ==================================================
+       MOBILE
+       ================================================== */
+
+    @media (max-width: 600px) {
+
+      .portada {
+        background-image: var(--fondo-mobile);
+      }
+
+      .iconos {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        height: auto;
+      }
+
+      .iconos a.icono {
+        position: static;
+      }
+
+      .iconos img {
+        width: 110px;
+        transform: none;
+      }
+
+      /* imágenes mobile */
+      .icono-partida img {
+        content: url("Guadaprueba2/puntolectura2small.png");
+      }
+
+      .icono-parada1 img {
+        content: url("Guadaprueba2/parada1small.png");
+      }
+
+      .icono-parada2 img {
+        content: url("Guadaprueba2/parada2small.png");
+      }
+
+      .icono-parada3 img {
+        content: url("Guadaprueba2/parada3small.png");
+      }
+
+      .icono-encuentro img {
+        content: url("Guadaprueba2/puntoencuentro2small.png");
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- CAMBIÁS ESTA CLASE PARA OTRO CURSO -->
+  <div class="portada curso-base">
+    <div class="iconos">
+
+      <a class="icono icono-partida"
+         href="https://isep-cba.edu.ar/campus/mod/url/view.php?id=20564"
+         target="_blank">
+        <img src="Guadaprueba2/puntopartida.png" alt="Punto de partida">
+      </a>
+
+      <a class="icono icono-parada1"
+         href="https://isep-cba.edu.ar/campus/mod/url/view.php?id=20565"
+         target="_blank">
+        <img src="Guadaprueba2/parada1b.png" alt="Parada 1">
+      </a>
+
+      <a class="icono icono-parada2"
+         href="https://isep-cba.edu.ar/campus/mod/url/view.php?id=20566"
+         target="_blank">
+        <img src="Guadaprueba2/parada2b.png" alt="Parada 2">
+      </a>
+
+      <a class="icono icono-parada3"
+         href="https://isep-cba.edu.ar/campus/mod/url/view.php?id=20567"
+         target="_blank">
+        <img src="Guadaprueba2/parada3b.png" alt="Parada 3">
+      </a>
+
+      <a class="icono icono-encuentro"
+         href="https://isep-cba.edu.ar/campus/mod/url/view.php?id=20568"
+         target="_blank">
+        <img src="Guadaprueba2/puntoencuentro2.png" alt="Punto de encuentro">
+      </a>
+
+    </div>
+  </div>
+</body>
+</html>
